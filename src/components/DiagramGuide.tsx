@@ -14,22 +14,22 @@ export default function DiagramGuide() {
       {/* Dimension Legend */}
       <div className="bg-white rounded-lg p-4 mb-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
         <div>
-          <strong className="text-blue-700">L:</strong> <span className="text-gray-700">Ledger span (backspan)</span>
+          <strong className="text-blue-700">p:</strong> <span className="text-gray-700">Floor Load (PSF)</span>
         </div>
         <div>
-          <strong className="text-blue-700">W:</strong> <span className="text-gray-700">Deck width (bumpout)</span>
+          <strong className="text-blue-700">a:</strong> <span className="text-gray-700">Bumpout Depth (ft)</span>
         </div>
         <div>
-          <strong className="text-blue-700">S:</strong> <span className="text-gray-700">Joist spacing</span>
+          <strong className="text-blue-700">b:</strong> <span className="text-gray-700">Overhang Past Post (ft)</span>
         </div>
         <div>
-          <strong className="text-blue-700">a:</strong> <span className="text-gray-700">Beam overhang A</span>
+          <strong className="text-blue-700">L:</strong> <span className="text-gray-700">Wall to Posts (ft)</span>
         </div>
         <div>
-          <strong className="text-blue-700">b:</strong> <span className="text-gray-700">Beam overhang B</span>
+          <strong className="text-blue-700">W:</strong> <span className="text-gray-700">Bumpout Width (ft)</span>
         </div>
         <div>
-          <strong className="text-blue-700">p:</strong> <span className="text-gray-700">Deck live load</span>
+          <strong className="text-blue-700">S:</strong> <span className="text-gray-700">Post Spacing (ft)</span>
         </div>
       </div>
 
