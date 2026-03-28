@@ -68,17 +68,17 @@ export default function Home() {
         </p>
       </header>
 
-      {/* Diagram Guide Section */}
-      <section className="mb-8">
-        <DiagramGuide />
-      </section>
-
       {/* Input Form Section */}
       <section className="bg-white rounded-2xl shadow-md p-6 sm:p-8 mb-8">
         <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-3 border-b-2 border-gray-200">
           Enter Your Deck Dimensions
         </h2>
         <InputForm onSubmit={handleCalculate} loading={loading} />
+      </section>
+
+      {/* Diagram Guide Section */}
+      <section className="mb-8">
+        <DiagramGuide />
       </section>
 
       {/* API-level error (not validation errors) */}
