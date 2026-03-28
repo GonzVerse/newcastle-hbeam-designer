@@ -9,11 +9,6 @@ export default function Home() {
   const [result, setResult] = useState<DesignResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [apiError, setApiError] = useState<string | null>(null);
-  const [currentValues, setCurrentValues] = useState<FormValues | null>(null);
-
-  function handleValuesChange(values: FormValues) {
-    setCurrentValues(values);
-  }
 
   async function handleCalculate(values: FormValues) {
     setLoading(true);
@@ -64,7 +59,7 @@ export default function Home() {
   return (
     <main className="flex-1 w-full max-w-4xl mx-auto px-4 py-6 sm:px-6 sm:py-10">
       {/* Header */}
-      <header className="mb-8 text-center sm:text-left">
+      <header className="mb-8 text-center">
         <h1 className="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">
           HBAM Bumpout Designer
         </h1>
@@ -78,12 +73,12 @@ export default function Home() {
         <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-3 border-b-2 border-gray-200">
           Enter Your Deck Dimensions
         </h2>
-        <InputForm onSubmit={handleCalculate} loading={loading} onChange={handleValuesChange} />
+        <InputForm onSubmit={handleCalculate} loading={loading} />
       </section>
 
       {/* Diagram Guide Section */}
       <section className="mb-8">
-        <DiagramGuide values={currentValues || undefined} />
+        <DiagramGuide />
       </section>
 
       {/* API-level error (not validation errors) */}
