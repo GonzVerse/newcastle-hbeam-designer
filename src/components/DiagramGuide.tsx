@@ -44,6 +44,51 @@ export default function DiagramGuide({ values }: DiagramGuideProps) {
       <p className="text-sm text-black mt-4 italic">
         💡 Tip: Measure from the house wall to the beam centerline for accurate dimensions.
       </p>
+
+      {/* Current Values Display */}
+      {values && (
+        <div className="mt-6 bg-white rounded-lg p-4 border-2 border-blue-200">
+          <h4 className="text-lg font-bold text-black mb-3">Current Dimensions:</h4>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-base">
+            {values.p_psf && (
+              <div>
+                <span className="font-semibold text-black">p:</span>{" "}
+                <span className="text-black">{values.p_psf} psf</span>
+              </div>
+            )}
+            {values.a_ft && (
+              <div>
+                <span className="font-semibold text-black">a:</span>{" "}
+                <span className="text-black">{values.a_ft} ft</span>
+              </div>
+            )}
+            {values.b_ft && (
+              <div>
+                <span className="font-semibold text-black">b:</span>{" "}
+                <span className="text-black">{values.b_ft} ft</span>
+              </div>
+            )}
+            {values.L_ft && (
+              <div>
+                <span className="font-semibold text-black">L:</span>{" "}
+                <span className="text-black">{values.L_ft} ft</span>
+              </div>
+            )}
+            {values.W_ft && (
+              <div>
+                <span className="font-semibold text-black">W:</span>{" "}
+                <span className="text-black">{values.W_ft} ft</span>
+              </div>
+            )}
+            {values.S_ft && (
+              <div>
+                <span className="font-semibold text-black">S:</span>{" "}
+                <span className="text-black">{values.S_ft} ft</span>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
