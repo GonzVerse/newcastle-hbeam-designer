@@ -93,9 +93,10 @@ const DEFAULTS: FormValues = {
 interface InputFormProps {
   onSubmit: (values: FormValues) => void;
   loading: boolean;
+  onChange?: (values: FormValues) => void;
 }
 
-export default function InputForm({ onSubmit, loading }: InputFormProps) {
+export default function InputForm({ onSubmit, loading, onChange }: InputFormProps) {
   const [values, setValues] = useState<FormValues>(DEFAULTS);
   const [errors, setErrors] = useState<Partial<Record<keyof FormValues, string>>>({});
 
@@ -121,9 +122,13 @@ export default function InputForm({ onSubmit, loading }: InputFormProps) {
   }
 
   function handleChange(key: keyof FormValues, val: string) {
-    setValues((prev) => ({ ...prev, [key]: val }));
+    const newValues = { ...values, [key]: val };
+    setValues(newValues);
     if (errors[key]) {
       setErrors((prev) => ({ ...prev, [key]: undefined }));
+    }
+    if (onChange) {
+      onChange(newValues);
     }
   }
 

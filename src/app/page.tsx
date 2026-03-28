@@ -9,6 +9,11 @@ export default function Home() {
   const [result, setResult] = useState<DesignResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [apiError, setApiError] = useState<string | null>(null);
+  const [currentValues, setCurrentValues] = useState<FormValues | null>(null);
+
+  function handleValuesChange(values: FormValues) {
+    setCurrentValues(values);
+  }
 
   async function handleCalculate(values: FormValues) {
     setLoading(true);
@@ -73,12 +78,12 @@ export default function Home() {
         <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-3 border-b-2 border-gray-200">
           Enter Your Deck Dimensions
         </h2>
-        <InputForm onSubmit={handleCalculate} loading={loading} />
+        <InputForm onSubmit={handleCalculate} loading={loading} onChange={handleValuesChange} />
       </section>
 
       {/* Diagram Guide Section */}
       <section className="mb-8">
-        <DiagramGuide />
+        <DiagramGuide values={currentValues || undefined} />
       </section>
 
       {/* API-level error (not validation errors) */}
