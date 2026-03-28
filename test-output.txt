@@ -1,0 +1,14 @@
+
+> newcastle-hbeam-designer@0.1.0 test:coverage
+> vitest --coverage --run --reporter=json --outputFile=test-results.json
+
+JSON report written to C:/Users/jborr/OneDrive/Desktop/My stuff/Career/RunToSolve/newcastle-hbeam-designer/test-results.json
+ % Coverage report from v8
+-----------------|---------|----------|---------|---------|-------------------
+File             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------------|---------|----------|---------|---------|-------------------
+All files        |   98.42 |    90.74 |     100 |     100 |                   
+ calculations.ts |   97.95 |    86.11 |     100 |     100 | 101,253           
+ constants.ts    |     100 |      100 |     100 |     100 |                   
+ validation.ts   |     100 |      100 |     100 |     100 |                   
+-----------------|---------|----------|---------|---------|-------------------

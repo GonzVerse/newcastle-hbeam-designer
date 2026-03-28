@@ -3,6 +3,7 @@
 import { useState } from "react";
 import InputForm, { FormValues } from "@/components/InputForm";
 import ResultsDisplay, { DesignResult } from "@/components/ResultsDisplay";
+import DiagramGuide from "@/components/DiagramGuide";
 
 export default function Home() {
   const [result, setResult] = useState<DesignResult | null>(null);
@@ -66,6 +67,11 @@ export default function Home() {
           Enter your deck dimensions below to size the framing members.
         </p>
       </header>
+
+      {/* Diagram Guide Section */}
+      <section className="mb-8">
+        <DiagramGuide />
+      </section>
 
       {/* Input Form Section */}
       <section className="bg-white rounded-2xl shadow-md p-6 sm:p-8 mb-8">
