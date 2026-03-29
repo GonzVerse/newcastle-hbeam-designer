@@ -65,10 +65,10 @@ export default function Home() {
     <main className="flex-1 w-full max-w-4xl mx-auto px-4 py-6 sm:px-6 sm:py-10">
       {/* Header */}
       <header className="mb-8 text-center">
-        <h1 className="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">
+        <h1 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
           HBAM Bumpout Designer
         </h1>
-        <p className="mt-2 text-lg text-gray-600">
+        <p className="mt-2 text-lg text-white">
           Enter your deck dimensions below to size the framing members.
         </p>
       </header>
